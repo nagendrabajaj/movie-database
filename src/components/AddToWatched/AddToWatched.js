@@ -1,5 +1,4 @@
-import { useContext } from "react/cjs/react.development";
-import { GlobalStore, useAppContext } from "../../context/GlobalStore";
+import { useAppContext } from "../../context/GlobalStore";
 import MovieItem from "../MovieItem";
 import classes from "./AddToWatched.module.css";
 

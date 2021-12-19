@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import classes from "./MovieCard.module.css";
-import { GlobalStore, useAppContext } from "../context/GlobalStore";
+import { useAppContext } from "../context/GlobalStore";
 
 const MovieCard = function ({ movie }) {
   const globalCtx = useAppContext();

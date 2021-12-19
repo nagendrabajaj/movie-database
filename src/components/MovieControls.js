@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import classes from "./MovieControls.module.css";
-import { GlobalStore, useAppContext } from "../context/GlobalStore";
+import { useAppContext } from "../context/GlobalStore";
 import { useHistory } from "react-router-dom";
 
 export const MovieControls = ({ movie, type }) => {
