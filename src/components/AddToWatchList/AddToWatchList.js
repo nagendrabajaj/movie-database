@@ -1,10 +1,10 @@
 import { useContext } from "react/cjs/react.development";
-import { GlobalStore } from "../../context/GlobalStore";
+import { GlobalStore, useAppContext } from "../../context/GlobalStore";
 import MovieItem from "../MovieItem";
 import classes from "./AddToWatchList.module.css";
 
 const AddToWatchList = function (props) {
-  const { watchlist } = useContext(GlobalStore);
+  const { watchlist } = useAppContext();
   return (
     <div className={classes.moviepage}>
       <div className={classes.container}>

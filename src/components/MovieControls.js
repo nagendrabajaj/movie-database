@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./MovieControls.module.css";
-import { GlobalStore } from "../context/GlobalStore";
+import { GlobalStore, useAppContext } from "../context/GlobalStore";
 import { useHistory } from "react-router-dom";
 
 export const MovieControls = ({ movie, type }) => {
@@ -9,7 +9,7 @@ export const MovieControls = ({ movie, type }) => {
     addMovieToWatched,
     removeMovieFromWatched,
     addMovieToWatchlist,
-  } = useContext(GlobalStore);
+  } = useAppContext();
   const history = useHistory();
   const removeMovieFromWatchlistHandler = function (e) {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, createContext } from "react";
+import React, { useReducer, useEffect, createContext, useContext } from "react";
 import AppReducer from "./AppReducer";
 
 const initialState = {
@@ -51,3 +51,7 @@ export const GlobalProvider = function (props) {
     </GlobalStore.Provider>
   );
 };
+
+export function useAppContext() {
+  return useContext(GlobalStore);
+}

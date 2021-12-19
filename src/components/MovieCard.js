@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import classes from "./MovieCard.module.css";
-import { GlobalStore } from "../context/GlobalStore";
+import { GlobalStore, useAppContext } from "../context/GlobalStore";
 
 const MovieCard = function ({ movie }) {
-  const globalCtx = useContext(GlobalStore);
+  const globalCtx = useAppContext();
   const storedMovie = globalCtx.watchlist.find((mov) => mov.id === movie.id);
   const storedMovieWatched = globalCtx.watched.find(
     (mov) => mov.id === movie.id
