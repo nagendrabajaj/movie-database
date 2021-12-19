@@ -1,0 +1,42 @@
+:root {
+  --primary: #032541;
+  --secondary: #21d07a;
+  --white: #fff;
+}
+
+.container {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 96vw;
+  height: 60vh;
+  margin-right: 0px;
+}
+.moviecard {
+  width: 20vw;
+  height: 20vh;
+  border-radius: 5px;
+  position: relative;
+  border: 0;
+  display: block;
+}
+
+.description {
+  color: var(--primary);
+  width: 70vw;
+  margin-right: 30px;
+}
+.moviecard img {
+  display: block;
+}
+
+.moviecard .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}

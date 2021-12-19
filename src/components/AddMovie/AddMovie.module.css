@@ -1,0 +1,33 @@
+:root {
+  --primary: #032541;
+  --secondary: #21d07a;
+  --white: #fff;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.addcontent {
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.addcontent .inputwrapper input {
+  width: 100%;
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+.results {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+.results li {
+  list-style: none;
+}
