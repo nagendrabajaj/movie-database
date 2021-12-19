@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import classes from "./MovieDetail.module.css";
+import { REACT_APP_TMDB_KEY } from "../../App";
 
 const MovieDetail = function () {
   const { movieId } = useParams();
@@ -9,7 +10,7 @@ const MovieDetail = function () {
     const fetchMovieDetail = async function () {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+          `https://api.themoviedb.org/3/movie/${movieId}?api_key=${REACT_APP_TMDB_KEY}`
         );
         const data = await response.json();
         if (!response.ok) {

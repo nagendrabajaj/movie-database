@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MovieCard from "../MovieCard";
 import classes from "./AddMovie.module.css";
+import { REACT_APP_TMDB_KEY } from "../../App";
 const AddMovie = function () {
   const [searchValue, setSearchValue] = useState("");
   const [result, setResult] = useState([]);
@@ -9,7 +10,7 @@ const AddMovie = function () {
     setSearchValue(e.target.value);
     if (e.target.value) {
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
       );
       const data = await response.json();
       setResult(data.results);

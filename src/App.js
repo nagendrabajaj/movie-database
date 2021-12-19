@@ -7,6 +7,8 @@ import Watched from "./components/pages/Watched";
 import MovieDetail from "./components/pages/MovieDetail";
 import { Redirect } from "react-router-dom";
 
+export const REACT_APP_TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
+
 function App() {
   return (
     <>
